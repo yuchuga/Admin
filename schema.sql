@@ -1,0 +1,20 @@
+CREATE TABLE teachers (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(255) UNIQUE NOT NULL
+);
+
+ALTER TABLE teachers AUTO_INCREMENT = 1001;
+
+CREATE TABLE students (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(255) UNIQUE NOT NULL,
+  suspend_status TINYINT DEFAULT 0
+);
+
+CREATE TABLE registration (
+  teacher_id INT NOT NULL,
+  student_id INT NOT NULL,
+  PRIMARY KEY (teacher_id, student_id),
+  FOREIGN KEY (teacher_id) REFERENCES teachers(id) ON DELETE CASCADE,
+  FOREIGN KEY (student_id) REFERENCES students(id) ON DELETE CASCADE
+);
