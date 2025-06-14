@@ -1,4 +1,4 @@
-import { pool } from '../dbconfig.js'
+import { pool } from '../mysql/dbconfig.js'
 import { EMAIL_REGEX } from '../utils/constant.js'
 import { mergeRemoveDuplicates } from '../utils/helper.js';
 import { 
