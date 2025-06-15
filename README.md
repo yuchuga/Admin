@@ -16,4 +16,4 @@ You may also see any compilation errors on the console.
 
 ### `npm test`
 
-Run unit tests.\
+Run unit tests using Jest.\
